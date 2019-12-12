@@ -1,26 +1,32 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = () => {
+const Image = ({ imageName }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(
-        relativePath: { eq: "images/gatsby-astronaut.png" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+      allFile(filter: { relativeDirectory: { eq: "images" } }) {
+        edges {
+          node {
+            name
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   `)
+  const [currentImage] = useState(
+    data.allFile.edges.filter(item => item.node.name === imageName)
+  )
 
   return (
     <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      className="gatsby-astronaut"
+      fluid={currentImage[0].node.childImageSharp.fluid}
+      style={{ width: "200px" }}
     />
   )
 }

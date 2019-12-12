@@ -1,13 +1,15 @@
 import { Link } from "gatsby"
 import React from "react"
+import Image from "./image"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+    <h1>
+      <Link to="/">{siteTitle}</Link>
+    </h1>
+    <Image imageName={"main"}></Image>
+    <Image imageName={"gatsby-icon"}></Image>
+    <Image imageName={"gatsby-astronaut"}></Image>
   </header>
 )
 
