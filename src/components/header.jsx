@@ -7,9 +7,9 @@ const Header = ({ siteTitle }) => (
     <h1>
       <Link to="/">{siteTitle}</Link>
     </h1>
-    <Image imageName={"main"}></Image>
-    <Image imageName={"gatsby-icon"}></Image>
-    <Image imageName={"gatsby-astronaut"}></Image>
+    <Image imageName={"main"} style={{ width: "200px" }}></Image>
+    <Image imageName={"gatsby-icon"} style={{ width: "300px" }}></Image>
+    <Image imageName={"gatsby-astronaut"} style={{ width: "200px" }}></Image>
   </header>
 )
 

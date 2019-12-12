@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = ({ imageName }) => {
+const Image = ({ imageName, style }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativeDirectory: { eq: "images" } }) {
@@ -10,7 +10,7 @@ const Image = ({ imageName }) => {
           node {
             name
             childImageSharp {
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 3000) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -24,10 +24,7 @@ const Image = ({ imageName }) => {
   )
 
   return (
-    <Img
-      fluid={currentImage[0].node.childImageSharp.fluid}
-      style={{ width: "200px" }}
-    />
+    <Img fluid={currentImage[0].node.childImageSharp.fluid} style={style} />
   )
 }
 
