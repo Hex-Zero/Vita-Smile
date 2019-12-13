@@ -10,7 +10,7 @@ const Image = ({ imageName, style }) => {
           node {
             name
             childImageSharp {
-              fluid(maxWidth: 3000) {
+              fluid(maxWidth: 170) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
