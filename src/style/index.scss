@@ -1,8 +1,8 @@
 :root {
-  --main-color: rgb(219, 18, 119, 0.7);
+  --main-color: #10669c;
   --mainL-color: rgba(253, 158, 206);
   --mainD-color: rgb(102, 10, 90);
-  --sec-color: #ffffff;
+  --sec-color: #eb8a2b;
   --secL-color: rgb(253, 248, 178);
   --secD-color: rgb(204, 190, 0);
   --background-color: white;
@@ -19,5 +19,9 @@
     background: #ffc0c0; /* WebKit/Blink Browsers */
   }
 }
+html {
+  overflow-x: hidden;
+}
 @import "./main";
 @import "./header";
+@import "./footer";

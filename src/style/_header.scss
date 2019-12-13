@@ -1,0 +1,24 @@
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  background: var(--main-color);
+  padding: 5px;
+  nav {
+    margin-left: 30vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    font-size: calc(0.6vw + 0.6vh);
+    .active {
+      color: var(--sec-color);
+    }
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      &:hover {
+        color: var(--sec-color);
+      }
+    }
+  }
+}
