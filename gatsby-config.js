@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Hex-Zero`,
+    title: `Vita Smile Photography`,
     description: `Main`,
     author: `Hex Zero`,
   },
@@ -22,7 +22,7 @@ module.exports = {
         name: `Hex Zero`,
         short_name: `Main`,
         start_url: `/`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/main.png`, // This path is relative to the root of the site.
       },
     },
   ],
