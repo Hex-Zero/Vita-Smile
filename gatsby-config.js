@@ -30,7 +30,7 @@ module.exports = {
         name: `Hex Zero`,
         short_name: `Main`,
         start_url: `/`,
-        icon: ``, // This path is relative to the root of the site.
+        icon: `src/images/hex.png`, // This path is relative to the root of the site.
       },
     },
   ],
