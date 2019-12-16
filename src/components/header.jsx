@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
-import Image from "./image"
+import Logo from "../images/mainLogo.svg"
 
 const Header = ({ siteTitle }) => (
   <header>
     <Link activeClassName="active" to="/">
-      <Image imageName={"main"} style={{ width: "170px" }}></Image>
+      <Logo />
     </Link>
     <nav>
       <h1>

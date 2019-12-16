@@ -8,6 +8,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /components/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -22,7 +30,7 @@ module.exports = {
         name: `Hex Zero`,
         short_name: `Main`,
         start_url: `/`,
-        icon: `src/images/main.png`, // This path is relative to the root of the site.
+        icon: ``, // This path is relative to the root of the site.
       },
     },
   ],
