@@ -1,10 +1,13 @@
 import { Link } from "gatsby"
 import React from "react"
-
+import Logo from "../svg/Logo.svg"
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <Link activeClassName="active" to="/"></Link>
+      <Link activeClassName="active" to="/">
+        <Logo className="mainLogo" />
+      </Link>
+
       <nav>
         <h1>
           <Link activeClassName="active" to="/">
