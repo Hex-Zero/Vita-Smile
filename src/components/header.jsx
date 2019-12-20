@@ -11,17 +11,7 @@ const Header = ({ siteTitle }) => {
       <nav>
         <h1>
           <Link activeClassName="active" to="/">
-            Main
-          </Link>
-        </h1>
-        <h1>
-          <Link activeClassName="active" to="/about">
-            About
-          </Link>
-        </h1>
-        <h1>
-          <Link activeClassName="active" to="/contact">
-            Contact
+            Home
           </Link>
         </h1>
         <h1>
@@ -30,10 +20,21 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
         <h1>
+          <Link activeClassName="active" to="/about">
+            About
+          </Link>
+        </h1>
+
+        <h1>
+          <Link activeClassName="active" to="/contact">
+            Contact
+          </Link>
+        </h1>
+        {/* <h1>
           <Link activeClassName="active" to="/pricing">
             Pricing
           </Link>
-        </h1>
+        </h1> */}
       </nav>
     </header>
   )
